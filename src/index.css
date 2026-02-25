@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-charcoal: #1F262E;
+  --color-cyber-lime: #8EDB2F;
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal text-white font-sans antialiased selection:bg-cyber-lime selection:text-charcoal;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tighter font-semibold;
+  }
+
+  .tech-border {
+    @apply border border-cyber-lime/20;
+  }
+
+  .tech-glow {
+    @apply shadow-[0_0_20px_rgba(142,219,47,0.1)];
+  }
+
+  .tech-tracking {
+    @apply tracking-[0.2em] uppercase text-[10px] font-mono;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-charcoal;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-cyber-lime/30 hover:bg-cyber-lime/50;
+}
