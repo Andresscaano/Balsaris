@@ -58,7 +58,7 @@ export const Home = () => {
               Balsaris <span className="text-cyber-lime">|</span> Ingeniería Inmobiliaria.
             </h1>
             <p className="text-xl text-white/60 mb-8 max-w-md border-l-2 border-cyber-lime/30 pl-6">
-              Ingeniería contra el caos de los portales. No instalamos anuncios, desplegamos infraestructuras de cierre.
+              Ingeniería contra el caos de los portales.<br />No instalamos anuncios, desplegamos infraestructuras de cierre.
             </p>
             <Link
               to="/diagnostico"

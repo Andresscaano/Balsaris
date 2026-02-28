@@ -1,12 +1,12 @@
-import { Terminal, Instagram, Twitter, Facebook } from "lucide-react";
+import { Instagram, Twitter, Facebook } from "lucide-react";
+import { BalsarisLogo } from "./Logo";
 
 export const Footer = () => {
   return (
     <footer className="py-12 border-t border-cyber-lime/10 px-6 bg-charcoal">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex items-center gap-2">
-          <Terminal className="w-5 h-5 text-cyber-lime" />
-          <span className="font-mono font-bold tracking-widest">BALSARIS</span>
+        <div className="group">
+          <BalsarisLogo className="h-8" />
         </div>
         <div className="flex gap-8">
           <a href="#" className="text-white/40 hover:text-cyber-lime transition-colors">

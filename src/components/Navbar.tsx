@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
-import { Terminal, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { BalsarisLogo } from "./Logo";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,16 +10,15 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: "HOME", path: "/" },
-    { name: "EL MANIFIESTO", path: "/manifiesto" },
+    { name: "MANIFIESTO", path: "/manifiesto" },
     { name: "INFRAESTRUCTURA", path: "/infraestructura" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-charcoal/80 backdrop-blur-md border-b border-cyber-lime/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <Terminal className="w-6 h-6 text-cyber-lime group-hover:rotate-12 transition-transform" />
-          <span className="font-mono font-bold tracking-widest text-xl">BALSARIS</span>
+        <Link to="/" className="group">
+          <BalsarisLogo className="h-10" />
         </Link>
 
         {/* Desktop Nav */}
