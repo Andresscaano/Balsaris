@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
 import { Manifiesto } from "./components/Manifiesto";
 import { Infraestructura } from "./components/Infraestructura";
@@ -67,6 +68,7 @@ export default function App() {
             />
           </Routes>
         </AnimatePresence>
+        <Footer />
       </div>
     </Router>
   );

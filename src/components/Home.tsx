@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Zap, Shield, BarChart3, Activity, Layers, Cpu, X, Terminal } from "lucide-react";
+import { ArrowRight, Zap, Shield, BarChart3, Activity, Layers, Cpu, X, Terminal, Instagram, Twitter, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const SchematicVisual = () => (
@@ -36,6 +36,17 @@ export const Home = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" 
+            alt="Modern Architecture" 
+            className="w-full h-full object-cover grayscale"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-transparent to-charcoal" />
+        </div>
+
         <div className="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -69,8 +80,16 @@ export const Home = () => {
       </section>
 
       {/* Section 2: Pain Points */}
-      <section className="py-24 bg-black/20 border-y border-cyber-lime/5">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="py-24 bg-black/20 border-y border-cyber-lime/5 relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 hidden lg:block">
+          <img 
+            src="https://images.unsplash.com/photo-1551288049-bbda4833effb?auto=format&fit=crop&q=80&w=2070" 
+            alt="Data Chaos" 
+            className="w-full h-full object-cover grayscale"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <div className="tech-tracking text-red-500 mb-4 flex items-center gap-2">
@@ -141,8 +160,8 @@ export const Home = () => {
       </section>
 
       {/* Section 4: Value Ladder */}
-      <section className="py-24 bg-black/30">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-24 bg-black/30 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="tech-tracking text-cyber-lime mb-12 text-center">DESPLIEGUE TÁCTICO</div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -151,6 +170,7 @@ export const Home = () => {
                 name: "PAC (Protocolo de Activación)",
                 desc: "Orden en el caos en 7 días. Limpieza de base de datos y activación de leads durmientes.",
                 icon: <Activity className="w-8 h-8" />,
+                img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
               },
               {
                 level: "NIVEL 02",
@@ -158,24 +178,31 @@ export const Home = () => {
                 desc: "El radar que separa compradores de mirones. Cualificación financiera automática antes de la llamada.",
                 icon: <Layers className="w-8 h-8" />,
                 highlight: true,
+                img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
               },
               {
                 level: "NIVEL 03",
                 name: "Inmobiliaria 100% Automatizada",
                 desc: "La línea de montaje predecible. Escalabilidad total sin aumentar la carga de trabajo del equipo.",
                 icon: <Cpu className="w-8 h-8" />,
+                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className={`p-8 tech-border relative group transition-all hover:-translate-y-2 ${
+                className={`p-8 tech-border relative group transition-all hover:-translate-y-2 overflow-hidden ${
                   item.highlight ? "bg-cyber-lime/10 border-cyber-lime/40" : "bg-charcoal"
                 }`}
               >
-                <div className="text-cyber-lime mb-6">{item.icon}</div>
-                <div className="tech-tracking mb-2 opacity-50">{item.level}</div>
-                <h3 className="text-xl font-bold mb-4">{item.name}</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-8">{item.desc}</p>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+                  <img src={item.img} alt={item.name} className="w-full h-full object-cover grayscale" referrerPolicy="no-referrer" />
+                </div>
+                <div className="relative z-10">
+                  <div className="text-cyber-lime mb-6">{item.icon}</div>
+                  <div className="tech-tracking mb-2 opacity-50">{item.level}</div>
+                  <h3 className="text-xl font-bold mb-4">{item.name}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed mb-8">{item.desc}</p>
+                </div>
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-cyber-lime group-hover:w-full transition-all duration-500" />
               </div>
             ))}
@@ -240,22 +267,6 @@ export const Home = () => {
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-cyber-lime/10 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-cyber-lime" />
-            <span className="font-mono font-bold tracking-widest">BALSARIS</span>
-          </div>
-          <div className="flex gap-8">
-            <a href="#" className="tech-tracking opacity-40 hover:opacity-100">LINKEDIN</a>
-            <a href="#" className="tech-tracking opacity-40 hover:opacity-100">TWITTER</a>
-            <a href="#" className="tech-tracking opacity-40 hover:opacity-100">GITHUB</a>
-          </div>
-          <div className="tech-tracking opacity-20">© 2024 BALSARIS SYSTEMS. ALL RIGHTS RESERVED.</div>
-        </div>
-      </footer>
     </div>
   );
 };

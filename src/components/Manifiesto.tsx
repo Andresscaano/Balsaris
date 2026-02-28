@@ -3,8 +3,17 @@ import { Quote, ShieldAlert, Zap } from "lucide-react";
 
 export const Manifiesto = () => {
   return (
-    <div className="pt-32 pb-24 px-6">
-      <div className="max-w-3xl mx-auto">
+    <div className="pt-32 pb-24 px-6 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 opacity-5 pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2070" 
+          alt="Modern Office" 
+          className="w-full h-full object-cover grayscale"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      <div className="max-w-3xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

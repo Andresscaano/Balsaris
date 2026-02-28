@@ -26,8 +26,17 @@ export const Infraestructura = () => {
   ];
 
   return (
-    <div className="pt-32 pb-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="pt-32 pb-24 px-6 relative overflow-hidden">
+      {/* Background Tech Image */}
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=2070" 
+          alt="Server Infrastructure" 
+          className="w-full h-full object-cover grayscale"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <div className="tech-tracking text-cyber-lime mb-4">INFRAESTRUCTURA TÉCNICA</div>
           <h1 className="text-5xl font-bold">Arquitectura de Cierre.</h1>
