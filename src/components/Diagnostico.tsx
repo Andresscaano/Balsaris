@@ -12,7 +12,6 @@ export const Diagnostico = () => {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
-    // REEMPLAZA TU_ID_AQUI CON EL ID DE FORMSPREE
     const response = await fetch("https://formspree.io/f/meelbeev", {
       method: "POST",
       body: formData,
