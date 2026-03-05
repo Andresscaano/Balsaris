@@ -36,7 +36,6 @@ export const Home = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col items-center justify-center px-6 relative overflow-hidden">
-        {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 opacity-10">
           <img 
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" 
@@ -159,7 +158,7 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Section 4: Value Ladder */}
+      {/* Section 4: Value Ladder (Servicios con Enlaces Externos) */}
       <section className="py-24 bg-black/30 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="tech-tracking text-cyber-lime mb-12 text-center">DESPLIEGUE TÁCTICO</div>
@@ -170,7 +169,8 @@ export const Home = () => {
                 name: "PAC (Protocolo de Activación)",
                 desc: "Orden en el caos en 7 días. Limpieza de base de datos y activación de leads durmientes.",
                 icon: <Activity className="w-8 h-8" />,
-                img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+                url: "https://balsaris-pac.lovable.app/"
               },
               {
                 level: "NIVEL 02",
@@ -178,19 +178,24 @@ export const Home = () => {
                 desc: "El radar que separa compradores de mirones. Cualificación financiera automática antes de la llamada.",
                 icon: <Layers className="w-8 h-8" />,
                 highlight: true,
-                img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+                img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+                url: "https://balsaris-core-engine.lovable.app/"
               },
               {
                 level: "NIVEL 03",
                 name: "Inmobiliaria 100% Automatizada",
                 desc: "La línea de montaje predecible. Escalabilidad total sin aumentar la carga de trabajo del equipo.",
                 icon: <Cpu className="w-8 h-8" />,
-                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+                url: "https://balsaris-automation-engine.lovable.app/"
               },
             ].map((item, i) => (
-              <div
+              <a
+                href={item.url}
                 key={i}
-                className={`p-8 tech-border relative group transition-all hover:-translate-y-2 overflow-hidden ${
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-8 tech-border relative group transition-all hover:-translate-y-2 overflow-hidden block ${
                   item.highlight ? "bg-cyber-lime/10 border-cyber-lime/40" : "bg-charcoal"
                 }`}
               >
@@ -204,7 +209,7 @@ export const Home = () => {
                   <p className="text-white/60 text-sm leading-relaxed mb-8">{item.desc}</p>
                 </div>
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-cyber-lime group-hover:w-full transition-all duration-500" />
-              </div>
+              </a>
             ))}
           </div>
         </div>
