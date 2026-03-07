@@ -187,7 +187,7 @@ export const Home = () => {
                 desc: "La línea de montaje predecible. Escalabilidad total sin aumentar la carga de trabajo del equipo.",
                 icon: <Cpu className="w-8 h-8" />,
                 img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-                url: "https://balsaris-automation-engine.lovable.app/"
+                url: "https://balsaris-automatizar.lovable.app"
               },
             ].map((item, i) => (
               <a
