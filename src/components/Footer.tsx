@@ -8,18 +8,42 @@ export const Footer = () => {
         <div className="group">
           <BalsarisLogo className="h-8" />
         </div>
+        
         <div className="flex gap-8">
-          <a href="#" className="text-white/40 hover:text-cyber-lime transition-colors">
+          {/* Instagram */}
+          <a 
+            href="https://www.instagram.com/balsarisact" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-cyber-lime transition-colors"
+          >
             <Instagram className="w-5 h-5" />
           </a>
-          <a href="#" className="text-white/40 hover:text-cyber-lime transition-colors">
+
+          {/* Twitter / X */}
+          <a 
+            href="https://x.com/balsarisact" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-cyber-lime transition-colors"
+          >
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="#" className="text-white/40 hover:text-cyber-lime transition-colors">
+
+          {/* Facebook */}
+          <a 
+            href="https://www.facebook.com/profile.php?id=61588466267835" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-cyber-lime transition-colors"
+          >
             <Facebook className="w-5 h-5" />
           </a>
         </div>
-        <div className="tech-tracking opacity-20">© 2024 BALSARIS SYSTEMS. ALL RIGHTS RESERVED.</div>
+
+        <div className="tech-tracking opacity-20 text-xs md:text-sm">
+          © 2026 BALSARIS SYSTEMS. ALL RIGHTS RESERVED.
+        </div>
       </div>
     </footer>
   );
