@@ -1,4 +1,4 @@
-import logoImg from "../../Captura de pantalla 2026-03-12 202852.png";
+import logoImg from "../../Logoultradefinitivo.png";
 
 export const BalsarisLogo = ({ className = "h-10" }: { className?: string }) => {
   return (
